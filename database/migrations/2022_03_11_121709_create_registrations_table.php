@@ -32,6 +32,7 @@ class CreateRegistrationsTable extends Migration
             $table->longText('occupation');
             $table->string('markAs');
             $table->string('remarks');
+            $table->json('beneficiaries');
             $table->timestamps();
         });
     }

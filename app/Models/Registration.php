@@ -19,7 +19,7 @@ class Registration extends Model
 
     protected $fillable = [
         'lastName',
-        'fistName',
+        'firstName',
         'middleName',
         'contactNumber',
         'dateOfBirth',
@@ -36,9 +36,7 @@ class Registration extends Model
         'markAs',
         'remarks'
     ];
-
-    public function registration()
-    {
-        return $this->hasOne(Beneficiary::class, 'ben_id');
-    }
+    protected $casts = [
+        'beneficiaries' => 'array'
+    ];
 }

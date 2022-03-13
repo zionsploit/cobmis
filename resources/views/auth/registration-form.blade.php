@@ -219,7 +219,7 @@
                     <div class="flex items-center justify-start gap-x-2">
                         <div class="flex items-center justify-start gap-2">
                             <span class="text-gray-300 font-semibold tracking-wide">MARK AS:</span>
-                            <select type="text" name="" placeholder="Sector"
+                            <select type="text" name="markAs" placeholder="Sector"
                                 class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-1 py-1 w-auto rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                                 <option value="BENEFICIARIES">BENEFICIARIES</option>
                                 <option value="UNBENEFICIARIES">UNBENEFICIARIES</option>
@@ -227,7 +227,7 @@
                         </div>
                         <div class="flex items-center justify-start gap-2">
                             <span class="text-gray-300 font-semibold tracking-wide">REMARKS:</span>
-                            <select type="text" name="" placeholder="Sector"
+                            <select type="text" name="remarks" placeholder="Sector"
                                 class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-1 py-1 w-auto rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                                 <option value="PRIORITY">PRIORITY</option>
                                 <option value="RECOMMENDED">RECOMMENDED</option>
