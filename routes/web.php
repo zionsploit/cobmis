@@ -41,7 +41,7 @@ Route::middleware([Authenticate::class])->group(function () {
 
 
 Route::view('/testDashboard', 'auth.dashboard');
-Route::view('/testRegistration-form', 'auth.registration-form');
+Route::view('/testRegistration-form', 'auth.registration-form', ['status' => null, 'message' => null]);
 Route::view('/testTracking', 'auth.tracking');
 Route::view('/testBeneficiaries', 'auth.beneficiaries');
 

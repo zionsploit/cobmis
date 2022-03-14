@@ -62,11 +62,10 @@ class RegistrationController extends Controller
             $ben_['ben_healthCondition'] = $request->input('ben_healthCondition');
             $reg->beneficiaries = $ben_;
 
-            if($reg->save())
-            {
-                echo 'Data Save';
+            if ($reg->save()) {
+                return view('auth.registration-form', ['status' => 200, 'message' => 'Done Registration']);
             }
         }
-        print_r($request->input());
+        return view('auth.registration-form', ['status' => 500, 'message' => 'Something went wrong please contact administration']);
     }
 }

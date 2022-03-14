@@ -5,6 +5,16 @@
     <div class="my-5">
         <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">REGISTRATION FORM</span>
     </div>
+    @if ($status === 200)
+        <div class="bg-green-700/50 py-2 px-2 text-center border-0 rounded my-5">
+            <span class="font-semibold text-gray-100 text-lg tracking-wide">{{ $message }}</span>
+        </div>
+    @endif
+    @if ($status === 500)
+        <div class="bg-red-700/50 py-2 px-2 text-center border-0 rounded my-5">
+            <span class="font-semibold text-gray-100 text-lg tracking-wide">{{ $message }}</span>
+        </div>
+    @endif
     <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md">
         <form action="/registration-form" method="post">
             @csrf
@@ -18,7 +28,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="firstName" placeholder="First Name"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('firstName') }}">
@@ -26,7 +36,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="middleName" placeholder="Middle Name"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('middleName') }}">
@@ -34,7 +44,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="contactNumber" placeholder="Contact Number"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('contactNumber') }}">
@@ -44,7 +54,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-start gap-x-2">
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="dateOfBirth" placeholder="Date of Birth [1998-1-30]"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('dateOfBirth') }}">
@@ -52,7 +62,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="religion" placeholder="Religion"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('religion') }}">
@@ -60,7 +70,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <select type="text" name="status" placeholder="Religion"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                             <option value="Married">Married</option>
@@ -73,7 +83,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <select type="text" name="gender" placeholder="Gender"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                             <option value="Male">Male</option>
@@ -86,7 +96,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-start gap-x-2">
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="monthlyIncome" placeholder="Monthly Income"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('monthlyIncome') }}">
@@ -94,7 +104,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <select type="text" name="socialClass" placeholder="Status"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                             <option value="Married">Poor</option>
@@ -109,7 +119,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="householdNumber" placeholder="Household #"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('householdNumber') }}">
@@ -117,7 +127,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="municipality" placeholder="Municipality"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('municipality') }}">
@@ -127,7 +137,7 @@
                     </div>
                 </div>
                 <div class="flex justify-between items-start gap-x-2">
-                    <div>
+                    <div class="flex flex-col">
                         <select type="text" name="sitio" placeholder="Sitio"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                             <option value="SENTRONG IBABA">SENTRONG IBABA</option>
@@ -142,7 +152,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <select type="text" name="sector" placeholder="Sector"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-auto rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
                             <option value="SENIOR CITIZEN">SENIOR CITIZEN</option>
@@ -158,7 +168,7 @@
                             <span class="text-sm font-semibold text-red-800/95 tracking-wide">{{ $message }}</span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="flex flex-col">
                         <input type="text" name="occupation" placeholder="Occupation and Location"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[30em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider"
                             value="{{ old('occupation') }}">
