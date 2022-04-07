@@ -163,7 +163,9 @@
                 <div class="px-5 py-2 flex justify-between items-center border-0 rounded bg-gray-900 shadow-md">
                     <img src="{{ asset('images/population.png') }}" alt="population total">
                     <div class="flex flex-col items-start">
-                        <span class="text-4xl text-gray-400 font-medium tracking-wider">213</span>
+                        <span class="text-4xl text-gray-400 font-medium tracking-wider">
+                            {{ count($data) }}
+                        </span>
                         <span class="tracking-wide text-gray-400 text-sm font-thin">POPULATION</span>
                     </div>
                 </div>
@@ -171,39 +173,109 @@
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Poor';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT
                             POOR)</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Low Income-class (But Not Poor)';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOWER MIDDLE INCOME CLASS</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Lower Middle-Class';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">MIDDLE MIDDLE-INCOME CLASS</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Middle Middle-Class';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER MIDDLE-INCOME CLASS</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Upper Middle-Class';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT
                             RICH)</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Upper Income-Class (But Not Rich)';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                     <a href=""
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">RICH</span>
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">
+                            {{ count(
+                                array_filter(
+                                    $data,
+                                    function ($val) {
+                                        return $val['socialClass'] === 'Rich';
+                                    },
+                                    0,
+                                ),
+                            ) }}
+                        </span>
                     </a>
                 </div>
             </div>

@@ -107,7 +107,7 @@
                     <div class="flex flex-col">
                         <select type="text" name="socialClass" placeholder="Status"
                             class="outline-none focus:outline-none focus:shadow-purple-500/60 shadow px-2 py-2 w-[20em] rounded transition-shadow font-medium text-base text-gray-700 tracking-wider">
-                            <option value="Married">Poor</option>
+                            <option value="Poor">Poor</option>
                             <option value="Low Income-class (But Not Poor)">Low Income-Class (But Not Poor)</option>
                             <option value="Lower Middle-Class">Lower Middle-Class</option>
                             <option value="Middle Middle-Class">Middle Middle-Class</option>
