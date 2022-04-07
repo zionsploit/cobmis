@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BeneficiariesController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RegistrationController;
 use App\Http\Controllers\Controller;
@@ -36,7 +37,6 @@ Route::middleware([RedirectIfAuthenticated::class])->group(function () {
 
 //Authenticated Middleware
 Route::middleware([Authenticate::class])->group(function () {
-    
 });
 //Authenticated Middleware
 
@@ -48,3 +48,4 @@ Route::view('/testBeneficiaries', 'auth.beneficiaries');
 
 Route::post('/registration-form', [RegistrationController::class, 'Registration']);
 Route::get('/testingDashboard', [DashboardController::class, 'Dashboard']);
+Route::get('/testingBeneficiaries', [BeneficiariesController::class, 'Beneficiaries']);

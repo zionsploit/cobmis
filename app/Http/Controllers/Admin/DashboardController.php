@@ -14,9 +14,9 @@ class DashboardController extends Controller
         $registered = Registration::all();
         if ($registered) {
             $data = $registered->toArray();
-            error_log(count(array_filter($data, function ($val) {
-                return $val['sitio'] === 'SENTRONG IBABA';
-            }, 0)));
+            // error_log(count(array_filter($data, function ($val) {
+            //     return $val['sitio'] === 'SENTRONG IBABA';
+            // }, 0)));
             return view('auth.dashboard')->with('data', $data);
         }
 
