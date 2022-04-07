@@ -24,7 +24,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG IBABA</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'SENTRONG IBABA';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -32,7 +42,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG ILAYA</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'SENTRONG ILAYA';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -40,7 +60,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG KABILA</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'SENTRONG KABILA';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -48,7 +78,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">NABALAGBAG</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'NABALAGBAG';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -56,7 +96,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SALIW IBABA</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'SALIW IBABA';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -64,7 +114,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SALIW ILAYA</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'SALIW ILAYA';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -72,7 +132,17 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">MAULABE</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count(
+                                    array_filter(
+                                        $data,
+                                        function ($val) {
+                                            return $val['sitio'] === 'MAULABE';
+                                        },
+                                        0,
+                                    ),
+                                ) }}
+                            </span>
                         </div>
                     </a>
                     <a href="/hello"
@@ -80,7 +150,9 @@
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">PREVIEW ALL</span>
                         <div class="flex justify-between items-center">
                             <img src="{{ asset('images/bounce-up.png') }}" alt="population" height="50" width="50" />
-                            <span class="text-xl font-bold tracking-wider text-gray-900">100</span>
+                            <span class="text-xl font-bold tracking-wider text-gray-900">
+                                {{ count($data) }}
+                            </span>
                         </div>
                     </a>
                 </div>
@@ -96,36 +168,48 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 my-3">
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT POOR)</span>
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT
+                            POOR)</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOWER MIDDLE INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">MIDDLE MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
-                        <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT RICH)</span>
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT
+                            RICH)</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
-                    <a href="" class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                    <a href=""
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">RICH</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">100</span>
                     </a>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        {{-- {{ print_r($data) }} --}}
     </div>
 @endsection

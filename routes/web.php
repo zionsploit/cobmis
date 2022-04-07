@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RegistrationController;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
@@ -46,3 +47,4 @@ Route::view('/testTracking', 'auth.tracking');
 Route::view('/testBeneficiaries', 'auth.beneficiaries');
 
 Route::post('/registration-form', [RegistrationController::class, 'Registration']);
+Route::get('/testingDashboard', [DashboardController::class, 'Dashboard']);
