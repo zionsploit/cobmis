@@ -18,7 +18,7 @@
             <thead>
                 <tr>
                     <th>NAME</th>
-                    <th>AGE</th>
+                    <th>BIRTH DATE</th>
                     <th>CONTACT #</th>
                     <th>SITIO</th>
                     <th>DATE SUBMIT</th>
@@ -29,210 +29,28 @@
             <tbody class="text-center">
                 @foreach ($data as $dataList)
                     <tr>
-                        <td>{{ strtoupper($dataList['lastName']) . ' ' . strtoupper($dataList['firstName']) . ' ' . strtoupper($dataList['middleName']) }}</td>
-                        <td>{{ date('Y-m-d') }}</td>
+                        <td>
+                            {{ strtoupper($dataList['lastName']) .' ' .strtoupper($dataList['firstName']) .' ' .strtoupper($dataList['middleName']) }}
+                        </td>
+                        <td>{{ $dataList['dateOfBirth'] }}</td>
+                        <td>{{ $dataList['contactNumber'] }}</td>
+                        <td>{{ $dataList['sitio'] }}</td>
+                        <td>{{ $dataList['created_at'] }}</td>
+                        <td>
+                            <span class="border-2 border-gray-600 rounded px-1">{{ $dataList['markAs'] }}</span>
+                        </td>
+                        <td>
+                            <button type="button"
+                                class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
+                            <button type="button"
+                                class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
+                            <button type="button"
+                                class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
+                            <button type="button"
+                                class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
+                        </td>
                     </tr>
                 @endforeach
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>DELA CRUZ JUAN</td>
-                    <td>30</td>
-                    <td>09123456789</td>
-                    <td>388 SENTRONG IBABA</td>
-                    <td>09/11/2022</td>
-                    <td>
-                        <span class="border-2 border-gray-600 rounded px-1">BENEFICIARIES</span>
-                    </td>
-                    <td>
-                        <button type="button"
-                            class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
-                        <button type="button"
-                            class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</button>
-                        <button type="button"
-                            class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                        <button type="button"
-                            class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
         <div class="w-full flex justify-end items-center gap-x-3 mt-5">
