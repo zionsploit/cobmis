@@ -37,7 +37,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/sentrong-ilaya"
                         class="bg-yellow-700 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-yellow-700/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG ILAYA</span>
                         <div class="flex justify-between items-center">
@@ -55,7 +55,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/sentrong-kabila"
                         class="bg-lime-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-lime-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG KABILA</span>
                         <div class="flex justify-between items-center">
@@ -73,7 +73,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/nabalagbag"
                         class="bg-blue-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-blue-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">NABALAGBAG</span>
                         <div class="flex justify-between items-center">
@@ -91,7 +91,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/saliw-ibaba"
                         class="bg-yellow-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-yellow-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SALIW IBABA</span>
                         <div class="flex justify-between items-center">
@@ -109,7 +109,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/saliw-ilaya"
                         class="bg-red-400 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-red-400/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SALIW ILAYA</span>
                         <div class="flex justify-between items-center">
@@ -127,7 +127,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/maulabe"
                         class="bg-teal-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-teal-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">MAULABE</span>
                         <div class="flex justify-between items-center">
@@ -145,7 +145,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/hello"
+                    <a href="/testingSitio/all"
                         class="bg-green-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-green-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">PREVIEW ALL</span>
                         <div class="flex justify-between items-center">

@@ -16,7 +16,7 @@
                     <img src="{{ asset('images/logoImage.png') }}" alt="HELLO WORLD" height="200" width="200">
                 </div>
                 <div class="mt-10 text-gray-400 flex flex-col gap-4 w-full">
-                    <a href="/testDashboard"
+                    <a href="/testingDashboard"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Dashboard
                     </a>
@@ -28,7 +28,7 @@
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Tracking
                     </a>
-                    <a href="/testBeneficiaries"
+                    <a href="/testingBeneficiaries"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Beneficiaries
                     </a>

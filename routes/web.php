@@ -49,3 +49,4 @@ Route::view('/testBeneficiaries', 'auth.beneficiaries');
 Route::post('/registration-form', [RegistrationController::class, 'Registration']);
 Route::get('/testingDashboard', [DashboardController::class, 'Dashboard']);
 Route::get('/testingBeneficiaries', [BeneficiariesController::class, 'Beneficiaries']);
+Route::get('/testingSitio/{sitio}', [DashboardController::class, 'SitioDashboard']);
