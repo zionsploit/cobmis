@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 my-3">
-                    <a href=""
+                    <a href="/testingStatusClass/Poor"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -185,7 +185,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href=""
+                    <a href="/testingStatusClass/Low-Income-Class"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT
                             POOR)</span>
@@ -194,14 +194,14 @@
                                 array_filter(
                                     $data,
                                     function ($val) {
-                                        return $val['socialClass'] === 'Low Income-class (But Not Poor)';
+                                        return $val['socialClass'] === 'Low Income class';
                                     },
                                     0,
                                 ),
                             ) }}
                         </span>
                     </a>
-                    <a href=""
+                    <a href="/testingStatusClass/Lower-Income-Class"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOWER MIDDLE INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -209,14 +209,14 @@
                                 array_filter(
                                     $data,
                                     function ($val) {
-                                        return $val['socialClass'] === 'Lower Middle-Class';
+                                        return $val['socialClass'] === 'Lower Middle Class';
                                     },
                                     0,
                                 ),
                             ) }}
                         </span>
                     </a>
-                    <a href=""
+                    <a href="/testingStatusClass/Middle-Middle-Class"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">MIDDLE MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -224,14 +224,14 @@
                                 array_filter(
                                     $data,
                                     function ($val) {
-                                        return $val['socialClass'] === 'Middle Middle-Class';
+                                        return $val['socialClass'] === 'Middle Middle Class';
                                     },
                                     0,
                                 ),
                             ) }}
                         </span>
                     </a>
-                    <a href=""
+                    <a href="/testingStatusClass/Upper-Middle-Class"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -239,14 +239,14 @@
                                 array_filter(
                                     $data,
                                     function ($val) {
-                                        return $val['socialClass'] === 'Upper Middle-Class';
+                                        return $val['socialClass'] === 'Upper Middle Class';
                                     },
                                     0,
                                 ),
                             ) }}
                         </span>
                     </a>
-                    <a href=""
+                    <a href="/testingStatusClass/Upper-Income-Class"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT
                             RICH)</span>
@@ -255,14 +255,14 @@
                                 array_filter(
                                     $data,
                                     function ($val) {
-                                        return $val['socialClass'] === 'Upper Income-Class (But Not Rich)';
+                                        return $val['socialClass'] === 'Upper Income Class';
                                     },
                                     0,
                                 ),
                             ) }}
                         </span>
                     </a>
-                    <a href=""
+                    <a href="/testingStatusClass/Rich"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">RICH</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">

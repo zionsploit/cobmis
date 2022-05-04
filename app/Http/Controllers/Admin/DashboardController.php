@@ -40,4 +40,17 @@ class DashboardController extends Controller
         }
         return view('auth.sitio');
     }
+
+    public function ClassDashboard($class)
+    {
+        $classData = str_replace('-', ' ', $class);
+        $registered = Registration::where('socialClass', 'LIKE', "%$classData%")->get();
+
+        if ($registered) {
+            $data = $registered->toArray();
+            return view('auth.status-class')->with('data', $data)->with('socialClass', $classData);
+        }
+
+        return view('auth.status-class');
+    }
 }

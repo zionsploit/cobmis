@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
+use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,3 +51,4 @@ Route::post('/registration-form', [RegistrationController::class, 'Registration'
 Route::get('/testingDashboard', [DashboardController::class, 'Dashboard']);
 Route::get('/testingBeneficiaries', [BeneficiariesController::class, 'Beneficiaries']);
 Route::get('/testingSitio/{sitio}', [DashboardController::class, 'SitioDashboard']);
+Route::get('/testingStatusClass/{class}', [DashboardController::class, 'ClassDashboard']);
