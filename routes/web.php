@@ -53,3 +53,6 @@ Route::get('/testingBeneficiaries', [BeneficiariesController::class, 'Beneficiar
 Route::get('/testingSitio/{sitio}', [DashboardController::class, 'SitioDashboard']);
 Route::get('/testingStatusClass/{class}', [DashboardController::class, 'ClassDashboard']);
 Route::get('/view-beneficiaries/{id}', [BeneficiariesController::class, 'ViewBeneficiaries']);
+Route::get('/modify-beneficiares/{id}', [BeneficiariesController::class, 'ViewModifyBeneficiaries']);
+Route::patch('/update-beneficiaries/{id}', [BeneficiariesController::class, 'UpdateModifyBeneficiaries']);
+Route::any('/delete-beneficiaries/{id}', [BeneficiariesController::class, 'DeleteBeneficiaries']);

@@ -44,10 +44,10 @@
                                 class="bg-green-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-green-700 transition-colors">TRACK</button>
                             <a href="/view-beneficiaries/{{ $dataList['id'] }}" type="button"
                                 class="bg-blue-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-blue-700 transition-colors">VIEW</a>
-                            <button type="button"
-                                class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</button>
-                            <button type="button"
-                                class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</button>
+                            <a href="/modify-beneficiares/{{ $dataList['id'] }}" type="button"
+                                class="bg-yellow-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-yellow-700 transition-colors">MODIFY</a>
+                            <a href="/delete-beneficiaries/{{ $dataList['id'] }}" type="button"
+                                class="bg-red-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-red-700 transition-colors">DELETE</a>
                         </td>
                     </tr>
                 @endforeach

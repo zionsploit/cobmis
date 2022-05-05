@@ -19,7 +19,7 @@
             </div>
             <div class="my-5">
                 <div class="grid grid-cols-2 gap-4 justify-items-center">
-                    <a href="/hello"
+                    <a href="/testingSitio/sentrong-ibaba"
                         class="bg-purple-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-purple-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG IBABA</span>
                         <div class="flex justify-between items-center">
