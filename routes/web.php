@@ -52,3 +52,4 @@ Route::get('/testingDashboard', [DashboardController::class, 'Dashboard']);
 Route::get('/testingBeneficiaries', [BeneficiariesController::class, 'Beneficiaries']);
 Route::get('/testingSitio/{sitio}', [DashboardController::class, 'SitioDashboard']);
 Route::get('/testingStatusClass/{class}', [DashboardController::class, 'ClassDashboard']);
+Route::get('/view-beneficiaries/{id}', [BeneficiariesController::class, 'ViewBeneficiaries']);
