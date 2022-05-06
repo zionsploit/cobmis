@@ -38,21 +38,21 @@ Route::middleware([RedirectIfAuthenticated::class])->group(function () {
 
 //Authenticated Middleware
 Route::middleware([Authenticate::class])->group(function () {
+    Route::post('/registration-form', [RegistrationController::class, 'Registration']);
+    Route::view('/registration-form', 'auth.registration-form', ['status' => null, 'message' => null])->name('registrationForm');
+    Route::get('/dashboard', [DashboardController::class, 'Dashboard'])->name('dashboard');
+    Route::get('/beneficiaries', [BeneficiariesController::class, 'Beneficiaries'])->name('beneficiaries');
+    Route::view('/tracking', 'auth.tracking')->name('tracking');
+    Route::get('/sitio/{sitio}', [DashboardController::class, 'SitioDashboard'])->name('sitio');
+    Route::get('/status-class/{class}', [DashboardController::class, 'ClassDashboard'])->name('statusClass');
+    Route::get('/view-beneficiaries/{id}', [BeneficiariesController::class, 'ViewBeneficiaries'])->name('viewBeneficiaries');
+    Route::get('/modify-beneficiares/{id}', [BeneficiariesController::class, 'ViewModifyBeneficiaries'])->name('modifyBeneficiares');
+    Route::patch('/update-beneficiaries/{id}', [BeneficiariesController::class, 'UpdateModifyBeneficiaries'])->name('updateBeneficiaries');
+    Route::any('/delete-beneficiaries/{id}', [BeneficiariesController::class, 'DeleteBeneficiaries'])->name('deleteBeneficiaries');
+    Route::get('/logout', [Controller::class, 'logout'])->name('logout');
 });
 //Authenticated Middleware
 
-
-Route::view('/testDashboard', 'auth.dashboard');
-Route::view('/testRegistration-form', 'auth.registration-form', ['status' => null, 'message' => null]);
-Route::view('/testTracking', 'auth.tracking');
-Route::view('/testBeneficiaries', 'auth.beneficiaries');
-
-Route::post('/registration-form', [RegistrationController::class, 'Registration']);
-Route::get('/testingDashboard', [DashboardController::class, 'Dashboard']);
-Route::get('/testingBeneficiaries', [BeneficiariesController::class, 'Beneficiaries']);
-Route::get('/testingSitio/{sitio}', [DashboardController::class, 'SitioDashboard']);
-Route::get('/testingStatusClass/{class}', [DashboardController::class, 'ClassDashboard']);
-Route::get('/view-beneficiaries/{id}', [BeneficiariesController::class, 'ViewBeneficiaries']);
-Route::get('/modify-beneficiares/{id}', [BeneficiariesController::class, 'ViewModifyBeneficiaries']);
-Route::patch('/update-beneficiaries/{id}', [BeneficiariesController::class, 'UpdateModifyBeneficiaries']);
-Route::any('/delete-beneficiaries/{id}', [BeneficiariesController::class, 'DeleteBeneficiaries']);
+// Route::view('/testDashboard', 'auth.dashboard');
+// Route::view('/testRegistration-form', 'auth.registration-form', ['status' => null, 'message' => null]);
+// Route::view('/testBeneficiaries', 'auth.beneficiaries');

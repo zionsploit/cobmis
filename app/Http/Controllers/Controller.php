@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Session;
 
 class Controller extends BaseController
 {
@@ -55,9 +56,16 @@ class Controller extends BaseController
 
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();
-            return redirect()->intended('/');
+            return redirect()->intended('/dashboard');
         }
-
         return view('guests.login', ['status' => 'Invalid Credentials']);
+    }
+
+    //logou Controller
+    public function logout()
+    {
+        Session::flush();
+        Auth::logout();
+        return redirect('login');
     }
 }

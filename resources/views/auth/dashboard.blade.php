@@ -19,7 +19,7 @@
             </div>
             <div class="my-5">
                 <div class="grid grid-cols-2 gap-4 justify-items-center">
-                    <a href="/testingSitio/sentrong-ibaba"
+                    <a href="{{ route('sitio', ['sitio' => 'sentrong-ibaba'])}}"
                         class="bg-purple-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-purple-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG IBABA</span>
                         <div class="flex justify-between items-center">
@@ -37,7 +37,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/sentrong-ilaya"
+                    <a href="{{ route('sitio', ['sitio' => 'sentrong-ilaya']) }}"
                         class="bg-yellow-700 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-yellow-700/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG ILAYA</span>
                         <div class="flex justify-between items-center">
@@ -55,7 +55,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/sentrong-kabila"
+                    <a href="{{ route('sitio', ['sitio' => 'sentrong-kabila'])}}"
                         class="bg-lime-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-lime-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG KABILA</span>
                         <div class="flex justify-between items-center">
@@ -73,7 +73,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/nabalagbag"
+                    <a href="{{ route('sitio', ['sitio' => 'nabalagbag']) }}"
                         class="bg-blue-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-blue-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">NABALAGBAG</span>
                         <div class="flex justify-between items-center">
@@ -91,7 +91,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/saliw-ibaba"
+                    <a href="{{ route('sitio', ['sitio' => 'saliw-ibaba']) }}"
                         class="bg-yellow-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-yellow-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SALIW IBABA</span>
                         <div class="flex justify-between items-center">
@@ -109,7 +109,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/saliw-ilaya"
+                    <a href="{{ route('sitio', ['sitio' => 'saliw-ilaya']) }}"
                         class="bg-red-400 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-red-400/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SALIW ILAYA</span>
                         <div class="flex justify-between items-center">
@@ -127,7 +127,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/maulabe"
+                    <a href="{{ route('sitio', ['sitio' => 'maulabe']) }}"
                         class="bg-teal-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-teal-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">MAULABE</span>
                         <div class="flex justify-between items-center">
@@ -145,7 +145,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="/testingSitio/all"
+                    <a href="{{ route('sitio', ['sitio' => 'all']) }}"
                         class="bg-green-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-green-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">PREVIEW ALL</span>
                         <div class="flex justify-between items-center">
@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 my-3">
-                    <a href="/testingStatusClass/Poor"
+                    <a href="{{ route('statusClass', ['class' => 'Poor']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -185,7 +185,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href="/testingStatusClass/Low-Income-Class"
+                    <a href="{{ route('statusClass', ['class' => 'Low-Income-Class']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT
                             POOR)</span>
@@ -201,7 +201,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href="/testingStatusClass/Lower-Income-Class"
+                    <a href="{{ route('statusClass', ['class' => 'Lower-Income-Class']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOWER MIDDLE INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -216,7 +216,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href="/testingStatusClass/Middle-Middle-Class"
+                    <a href="{{ route('statusClass', ['class' => 'Middle-Middle-Class']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">MIDDLE MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -231,7 +231,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href="/testingStatusClass/Upper-Middle-Class"
+                    <a href="{{ route('statusClass', ['class' => 'Upper-Middle-Class']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -246,7 +246,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href="/testingStatusClass/Upper-Income-Class"
+                    <a href="{{ route('statusClass', ['class' => 'Upper-Income-Class']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT
                             RICH)</span>
@@ -262,7 +262,7 @@
                             ) }}
                         </span>
                     </a>
-                    <a href="/testingStatusClass/Rich"
+                    <a href="{{ route('statusClass', ['class' => 'Rich']) }}"
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">RICH</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">

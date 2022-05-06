@@ -16,19 +16,19 @@
                     <img src="{{ asset('images/logoImage.png') }}" alt="HELLO WORLD" height="200" width="200">
                 </div>
                 <div class="mt-10 text-gray-400 flex flex-col gap-4 w-full">
-                    <a href="/testingDashboard"
+                    <a href="{{ route('dashboard') }}"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Dashboard
                     </a>
-                    <a href="/testRegistration-form"
+                    <a href="{{ route('registrationForm') }}"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Registration Form
                     </a>
-                    <a href="/testTracking"
+                    <a href="{{ route('tracking') }}"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Tracking
                     </a>
-                    <a href="/testingBeneficiaries"
+                    <a href="{{ route('beneficiaries') }}"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Beneficiaries
                     </a>
@@ -40,7 +40,7 @@
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Setting
                     </a>
-                    <a href=""
+                    <a href="{{ route('logout') }}"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Log out
                     </a>

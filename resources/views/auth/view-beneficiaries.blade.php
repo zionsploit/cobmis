@@ -5,8 +5,7 @@
 @section('contents')
     <div class="my-5 flex justify-between items-center">
         <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">View {{ 'User' }}</span>
-        <a href="/testingBeneficiaries" type="button"
-            class="px-3 py-2 bg-red-400 font-medium text-base rounded hover:bg-red-400/50 cursor-pointer">Back</a>
+        <a href="{{ route('beneficiaries') }}" type="button" class="px-3 py-2 bg-green-400 hover:bg-green-400/50 cursor-pointer rounded">Back</a type="button">
     </div>
     <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md grid grid-cols-2">
         <div class="flex flex-col justify-start items-start gap-y-2">
