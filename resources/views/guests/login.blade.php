@@ -3,9 +3,12 @@
 @section('title', 'Login')
 
 @section('contents')
-    <div class="border-0 bg-indigo-500/75 rounded-lg w-auto h-auto shadow-md">
+    <div class="border-0 bg-indigo-900/75 rounded-lg w-auto h-auto shadow-md">
         <div class="py-6 px-4 flex flex-col w-full">
-            <span class="text-2xl font-bold tracking-wide text-center text-gray-800/80 my-2">Sign In</span>
+            <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold tracking-wide text-center text-gray-200/80 my-2">Sign In</span>
+                @svg('bi-key-fill', ['class' => 'text-red-200'])
+            </div>
             @if ($status)
                 <div class="bg-green-400/40 px-2 text-center py-3 my-2">
                     <span class="font-bold text-gray-900/80 tracking-wider">{{ $status }}</span>
@@ -15,7 +18,7 @@
                 @csrf
                 <div class="flex flex-col gap-y-2">
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Username</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Username</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="text"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -28,7 +31,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Password</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Password</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="password"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -40,9 +43,11 @@
                             </span>
                         @enderror
                     </div>
-                    <div>
+                    <div class="w-full flex justify-between items-center">
                         <input type="submit" value="LOGIN"
                             class="bg-red-900/70 px-4 py-1 text-white font-semibold tracking-wider text-base rounded-md cursor-pointer hover:bg-red-900/90 transition-all">
+                        <a class="text-red-900 tracking-wider cursor-pointer font-medium hover:text-red-900/50">Forgot
+                            Password?</a>
                     </div>
                 </div>
             </form>
