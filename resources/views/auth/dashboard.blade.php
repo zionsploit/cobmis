@@ -4,18 +4,18 @@
 
 @section('contents')
     <div class="my-5">
-        <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">DASHBOARD</span>
+        <span class="text-gray-900 text-2xl font-semibold tracking-wider">DASHBOARD</span>
     </div>
     <div class="flex justify-between items-start w-full">
         <div class="w-[60em]">
-            <div class="flex flex-col text-center w-full bg-gray-900 rounded-t py-4 gap-1">
-                <span class="text-3xl text-gray-400 font-semibold tracking-wide">BRGY. MANGGAHAN</span>
-                <span class="text-lg text-gray-400 font-normal tracking-wide">Dolores Quezon</span>
-                <span class="text-sm text-gray-400 font-thin tracking-wider">DISCTRICT INFORMATION FOR POPULATION AND
+            <div class="flex flex-col text-center w-full bg-[#3D405B] rounded-t py-4 gap-1">
+                <span class="text-3xl text-gray-900 font-semibold tracking-wide">BRGY. MANGGAHAN</span>
+                <span class="text-lg text-gray-900 font-normal tracking-wide">Dolores Quezon</span>
+                <span class="text-sm text-gray-900 font-medium tracking-wider">DISCTRICT INFORMATION FOR POPULATION AND
                     CLUSTERING</span>
             </div>
-            <div class="bg-gray-900/80 rounded-b w-full py-2 px-3">
-                <span class="text-lg text-gray-400 font-thin tracking-wider">SITIO (PUROK) IN BRGY. MANGGAHAN</span>
+            <div class="bg-[#81B29A] rounded-b w-full py-2 px-3">
+                <span class="text-lg text-black font-medium tracking-wider">SITIO (PUROK) IN BRGY. MANGGAHAN</span>
             </div>
             <div class="my-5">
                 <div class="grid grid-cols-2 gap-4 justify-items-center">
@@ -160,18 +160,18 @@
         </div>
         <div class="mx-4 w-[20em]">
             <div class="flex flex-col gap-2">
-                <div class="px-5 py-2 flex justify-between items-center border-0 rounded bg-gray-900 shadow-md">
+                <div class="px-5 py-2 flex justify-between items-center border-0 rounded bg-[#81B29A] shadow-md">
                     <img src="{{ asset('images/population.png') }}" alt="population total">
                     <div class="flex flex-col items-start">
-                        <span class="text-4xl text-gray-400 font-medium tracking-wider">
+                        <span class="text-4xl text-gray-900 font-medium tracking-wider">
                             {{ count($data) }}
                         </span>
-                        <span class="tracking-wide text-gray-400 text-sm font-thin">POPULATION</span>
+                        <span class="tracking-wide text-gray-900 text-sm font-semibold">POPULATION</span>
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 my-3">
                     <a href="{{ route('statusClass', ['class' => 'Poor']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
                             {{ count(
@@ -186,7 +186,7 @@
                         </span>
                     </a>
                     <a href="{{ route('statusClass', ['class' => 'Low-Income-Class']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT
                             POOR)</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -202,7 +202,7 @@
                         </span>
                     </a>
                     <a href="{{ route('statusClass', ['class' => 'Lower-Income-Class']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOWER MIDDLE INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
                             {{ count(
@@ -217,7 +217,7 @@
                         </span>
                     </a>
                     <a href="{{ route('statusClass', ['class' => 'Middle-Middle-Class']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">MIDDLE MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
                             {{ count(
@@ -232,7 +232,7 @@
                         </span>
                     </a>
                     <a href="{{ route('statusClass', ['class' => 'Upper-Middle-Class']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
                             {{ count(
@@ -247,7 +247,7 @@
                         </span>
                     </a>
                     <a href="{{ route('statusClass', ['class' => 'Upper-Income-Class']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT
                             RICH)</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -263,7 +263,7 @@
                         </span>
                     </a>
                     <a href="{{ route('statusClass', ['class' => 'Rich']) }}"
-                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-slate-700 rounded shadow-md gap-10">
+                        class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">RICH</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
                             {{ count(

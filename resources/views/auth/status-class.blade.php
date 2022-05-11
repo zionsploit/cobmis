@@ -7,7 +7,7 @@
         <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">{{ $socialClass }}</span>
         <a href="{{ route('dashboard') }}" type="button" class="px-3 py-2 bg-green-400 hover:bg-green-400/50 cursor-pointer rounded">Back</a type="button">
     </div>
-    <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md w-full">
+    <div class="bg-[#3D405B] py-5 px-4 border-0 rounded shadow-md w-full">
         <div class="float-right my-1 mb-3">
             <div class="flex justify-start items-center gap-x-3">
                 <span class="text-gray-300 font-semibold text-lg tracking-wider">Search:</span>

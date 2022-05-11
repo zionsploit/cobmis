@@ -3,7 +3,7 @@
 @section('title', 'Login')
 
 @section('contents')
-    <div class="border-0 bg-indigo-900/75 rounded-lg w-auto h-auto shadow-md">
+    <div class="border-0 bg-[#3D405B] rounded-lg w-auto h-auto shadow-md">
         <div class="py-6 px-4 flex flex-col w-full">
             <div class="flex justify-between items-center">
                 <span class="text-2xl font-bold tracking-wide text-center text-gray-200/80 my-2">Sign In</span>

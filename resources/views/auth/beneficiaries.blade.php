@@ -6,7 +6,7 @@
     <div class="my-5">
         <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">BENEFICIARIES</span>
     </div>
-    <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md w-full">
+    <div class="bg-[#3D405B] py-5 px-4 border-0 rounded shadow-md w-full">
         <div class="float-right my-1 mb-3">
             <div class="flex justify-start items-center gap-x-3">
                 <span class="text-gray-300 font-semibold text-lg tracking-wider">Search:</span>

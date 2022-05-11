@@ -10,7 +10,7 @@
 
 <body>
     <div class="flex">
-        <div class="bg-gray-900 h-screen w-[20em]">
+        <div class="bg-[#3D405B] h-screen w-[20em]">
             <div class="px-5 py-2">
                 <div class="my-5 flex justify-center">
                     <img src="{{ asset('images/logoImage.png') }}" alt="HELLO WORLD" height="200" width="200">
@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="w-screen h-screen bg-gray-900/90">
+        <div class="w-screen h-screen bg-[#3D405B]/90">
             <div class="p-5 w-full">
                 @yield('contents')
             </div>

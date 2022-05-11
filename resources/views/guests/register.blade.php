@@ -3,10 +3,12 @@
 @section('title', 'Register')
 
 @section('contents')
-    <div class="border-0 bg-indigo-500/75 rounded-lg w-auto h-auto shadow-md">
+    <div class="border-0 bg-[#3D405B] rounded-lg w-auto h-auto shadow-md">
         <div class="py-6 px-4 flex flex-col w-full">
-
-            <span class="text-2xl font-bold tracking-wide text-center text-gray-800/80 my-2">Registration</span>
+            <div class="flex justify-between items-center">
+                <span class="text-2xl font-bold tracking-wide text-center text-gray-200/80 my-2">Registration</span>
+                @svg('bi-key-fill', ['class' => 'text-red-200'])
+            </div>
             @if ($status)
                 <div class="bg-green-400/40 px-2 text-center py-3 my-2">
                     <span class="font-bold text-gray-900/80 tracking-wider">{{ $status }}</span>
@@ -16,7 +18,7 @@
                 @csrf
                 <div class="flex flex-col gap-y-2">
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">First Name</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">First Name</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="text"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -29,7 +31,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Middle Name</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Middle Name</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="text"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -42,7 +44,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Last Name</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Last Name</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="text"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -55,7 +57,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Username</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Username</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="text"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -68,7 +70,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Password</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Password</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="password"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"
@@ -81,7 +83,7 @@
                         @enderror
                     </div>
                     <div>
-                        <label for="Username" class="font-semibold tracking-wider text-gray-800/75">Confirm-Password</label>
+                        <label for="Username" class="font-semibold tracking-wider text-gray-200/80">Confirm-Password</label>
                         <div class="border-2 border-gray-400/50 rounded-md w-[20em] h-10">
                             <input type="password"
                                 class="border-0 focus:outline-none w-full rounded-md text-sm h-full px-1 font-semibold text-gray-800/80 tracking-wider"

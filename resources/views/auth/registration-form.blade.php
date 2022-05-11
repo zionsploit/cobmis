@@ -15,7 +15,7 @@
             <span class="font-semibold text-gray-100 text-lg tracking-wide">{{ $message }}</span>
         </div>
     @endif
-    <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md">
+    <div class="bg-[#3D405B] py-5 px-4 border-0 rounded shadow-md">
         <form action="/registration-form" method="post">
             @csrf
             <div class="flex flex-col gap-y-5">

@@ -20,10 +20,6 @@ use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('auth');
-
 //Guest Middleware 
 Route::middleware([RedirectIfAuthenticated::class])->group(function () {
     //Login Route

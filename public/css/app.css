@@ -705,8 +705,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-slate-500\/75 {
   background-color: rgb(100 116 139 / 0.75);
 }
-.bg-indigo-500\/75 {
-  background-color: rgb(99 102 241 / 0.75);
+.bg-indigo-900\/75 {
+  background-color: rgb(49 46 129 / 0.75);
 }
 .bg-green-400\/40 {
   background-color: rgb(74 222 128 / 0.4);
@@ -714,8 +714,39 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-red-900\/70 {
   background-color: rgb(127 29 29 / 0.7);
 }
-.bg-indigo-900\/75 {
-  background-color: rgb(49 46 129 / 0.75);
+.bg-indigo-500\/75 {
+  background-color: rgb(99 102 241 / 0.75);
+}
+.bg-\[\#ffdab9\]\/90 {
+  background-color: rgb(255 218 185 / 0.9);
+}
+.bg-\[\#F2CC8F\]\/75 {
+  background-color: rgb(242 204 143 / 0.75);
+}
+.bg-\[\#ffdab9\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 218 185 / var(--tw-bg-opacity));
+}
+.bg-\[\#F2CC8F\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(242 204 143 / var(--tw-bg-opacity));
+}
+.bg-\[\#3D405B\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(61 64 91 / var(--tw-bg-opacity));
+}
+.bg-\[\#3D405B\]\/50 {
+  background-color: rgb(61 64 91 / 0.5);
+}
+.bg-\[\#3D405B\]\/90 {
+  background-color: rgb(61 64 91 / 0.9);
+}
+.bg-\[\#3D405B\]\/80 {
+  background-color: rgb(61 64 91 / 0.8);
+}
+.bg-\[\#81B29A\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(129 178 154 / var(--tw-bg-opacity));
 }
 .p-2 {
   padding: 0.5rem;
@@ -774,6 +805,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center {
   text-align: center;
 }
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
@@ -785,10 +820,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
-}
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 .text-xl {
   font-size: 1.25rem;
@@ -802,6 +833,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
   line-height: 1.5rem;
 }
+.font-bold {
+  font-weight: 700;
+}
 .font-semibold {
   font-weight: 600;
 }
@@ -810,9 +844,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .font-thin {
   font-weight: 100;
-}
-.font-bold {
-  font-weight: 700;
 }
 .font-medium {
   font-weight: 500;
@@ -863,14 +894,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-200\/80 {
   color: rgb(229 231 235 / 0.8);
 }
-.text-gray-800\/80 {
-  color: rgb(31 41 55 / 0.8);
+.text-red-200 {
+  --tw-text-opacity: 1;
+  color: rgb(254 202 202 / var(--tw-text-opacity));
 }
 .text-gray-900\/80 {
   color: rgb(17 24 39 / 0.8);
 }
-.text-gray-800\/75 {
-  color: rgb(31 41 55 / 0.75);
+.text-gray-800\/80 {
+  color: rgb(31 41 55 / 0.8);
 }
 .text-red-900\/90 {
   color: rgb(127 29 29 / 0.9);
@@ -879,24 +911,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
-.text-gray-200 {
-  --tw-text-opacity: 1;
-  color: rgb(229 231 235 / var(--tw-text-opacity));
-}
-.text-red-200 {
-  --tw-text-opacity: 1;
-  color: rgb(254 202 202 / var(--tw-text-opacity));
-}
-.text-red-600 {
-  --tw-text-opacity: 1;
-  color: rgb(220 38 38 / var(--tw-text-opacity));
-}
 .text-red-900 {
   --tw-text-opacity: 1;
   color: rgb(127 29 29 / var(--tw-text-opacity));
 }
-.text-gray-500\/80 {
-  color: rgb(107 114 128 / 0.8);
+.text-gray-800\/75 {
+  color: rgb(31 41 55 / 0.75);
+}
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 .underline {
   -webkit-text-decoration-line: underline;
@@ -1002,15 +1030,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:text-gray-300:hover {
   --tw-text-opacity: 1;
   color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-.hover\:text-gray-200\/50:hover {
-  color: rgb(229 231 235 / 0.5);
-}
-.hover\:text-red-200\/50:hover {
-  color: rgb(254 202 202 / 0.5);
-}
-.hover\:text-red-600\/50:hover {
-  color: rgb(220 38 38 / 0.5);
 }
 .hover\:text-red-900\/50:hover {
   color: rgb(127 29 29 / 0.5);
