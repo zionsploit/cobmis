@@ -19,7 +19,7 @@
             </div>
             <div class="my-5">
                 <div class="grid grid-cols-2 gap-4 justify-items-center">
-                    <a href="{{ route('sitio', ['sitio' => 'sentrong-ibaba'])}}"
+                    <a href="{{ route('sitio', ['sitio' => 'sentrong-ibaba']) }}"
                         class="bg-purple-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-purple-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG IBABA</span>
                         <div class="flex justify-between items-center">
@@ -55,7 +55,7 @@
                             </span>
                         </div>
                     </a>
-                    <a href="{{ route('sitio', ['sitio' => 'sentrong-kabila'])}}"
+                    <a href="{{ route('sitio', ['sitio' => 'sentrong-kabila']) }}"
                         class="bg-lime-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-lime-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG KABILA</span>
                         <div class="flex justify-between items-center">
@@ -170,7 +170,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-2 my-3">
-                    <a href="{{ route('statusClass', ['class' => 'Poor']) }}"
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -184,8 +184,8 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
-                    <a href="{{ route('statusClass', ['class' => 'Low-Income-Class']) }}"
+                    </div>
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOW-INCOME CLASS (BUT NOT
                             POOR)</span>
@@ -200,8 +200,8 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
-                    <a href="{{ route('statusClass', ['class' => 'Lower-Income-Class']) }}"
+                    </div>
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">LOWER MIDDLE INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -215,8 +215,8 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
-                    <a href="{{ route('statusClass', ['class' => 'Middle-Middle-Class']) }}"
+                    </div>
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">MIDDLE MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -230,8 +230,8 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
-                    <a href="{{ route('statusClass', ['class' => 'Upper-Middle-Class']) }}"
+                    </div>
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER MIDDLE-INCOME CLASS</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -245,8 +245,8 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
-                    <a href="{{ route('statusClass', ['class' => 'Upper-Income-Class']) }}"
+                    </div>
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">UPPER-INCOME CLASS (BUT NOT
                             RICH)</span>
@@ -261,8 +261,8 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
-                    <a href="{{ route('statusClass', ['class' => 'Rich']) }}"
+                    </div>
+                    <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">RICH</span>
                         <span class="text-lg font-semibold tracking-wider text-gray-900">
@@ -276,12 +276,22 @@
                                 ),
                             ) }}
                         </span>
-                    </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+    <div id="chart"></div>
     <div>
         {{-- {{ print_r($data) }} --}}
     </div>
 @endsection
+<script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
+<!-- Chartisan -->
+<script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
+<script>
+    // const chart = new Chartisan({
+    //     el: '#chart',
+    //     url: "",
+    // });
+</script>
