@@ -56,7 +56,7 @@ class Controller extends BaseController
 
         if (Auth::attempt($validated)) {
             $request->session()->regenerate();
-            return redirect()->intended('/dashboard');
+            return redirect('/dashboard');
         }
         return view('guests.login', ['status' => 'Invalid Credentials']);
     }

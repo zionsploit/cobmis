@@ -1,9 +1,8 @@
 @extends('./components.authLayout')
 
 @section('title', 'Dashboard')
-
 @section('contents')
-    <div class="my-5">
+    <div class="my-1">
         <span class="text-gray-900 text-2xl font-semibold tracking-wider">DASHBOARD</span>
     </div>
     <div class="flex justify-between items-start w-full">
@@ -18,7 +17,7 @@
                 <span class="text-lg text-black font-medium tracking-wider">SITIO (PUROK) IN BRGY. MANGGAHAN</span>
             </div>
             <div class="my-5">
-                <div class="grid grid-cols-2 gap-4 justify-items-center">
+                {{-- <div class="grid grid-cols-2 gap-4 justify-items-center">
                     <a href="{{ route('sitio', ['sitio' => 'sentrong-ibaba']) }}"
                         class="bg-purple-500 w-[20em] px-3 py-2 border-0 rounded-md shadow-md cursor-pointer hover:bg-purple-500/95 transition-all">
                         <span class="text-2xl font-semibold text-gray-800/95 tracking-wide">SENTRONG IBABA</span>
@@ -155,21 +154,25 @@
                             </span>
                         </div>
                     </a>
-                </div>
+                </div> --}}
+                <canvas id="dashboard_1" width="150" height="80"></canvas>
             </div>
         </div>
-        <div class="mx-4 w-[20em]">
+        <div class="mx-4 w-[30em]">
             <div class="flex flex-col gap-2">
-                <div class="px-5 py-2 flex justify-between items-center border-0 rounded bg-[#81B29A] shadow-md">
-                    <img src="{{ asset('images/population.png') }}" alt="population total">
+                <div class="px-5 py-2 border-0 rounded bg-[#81B29A] shadow-md">
                     <div class="flex flex-col items-start">
-                        <span class="text-4xl text-gray-900 font-medium tracking-wider">
-                            {{ count($data) }}
-                        </span>
-                        <span class="tracking-wide text-gray-900 text-sm font-semibold">POPULATION</span>
+                        <span class="text-center w-full font-medium tracking-wide">POPULATION</span>
+                        <canvas id="dashboard_2" width="60" height="50"></canvas>
                     </div>
                 </div>
-                <div class="flex flex-col gap-2 my-3">
+                <div class="px-5 py-2 border-0 rounded bg-[#81B29A] shadow-md">
+                    <div class="flex flex-col items-start">
+                        <span class="text-center w-full font-medium tracking-wide">Beneficiaries Registered By Year</span>
+                        <canvas id="dashboard_3" width="100" height="50"></canvas>
+                    </div>
+                </div>
+                {{-- <div class="flex flex-col gap-2 my-3">
                     <div
                         class="flex justify-between items-center w-full px-2 py-1 h-[5em] bg-[#81B29A] rounded shadow-md gap-10">
                         <span class="text-lg font-semibold tracking-wider text-gray-900">POOR</span>
@@ -277,21 +280,11 @@
                             ) }}
                         </span>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>
-    <div id="chart"></div>
     <div>
         {{-- {{ print_r($data) }} --}}
     </div>
 @endsection
-<script src="https://unpkg.com/echarts/dist/echarts.min.js"></script>
-<!-- Chartisan -->
-<script src="https://unpkg.com/@chartisan/echarts/dist/chartisan_echarts.js"></script>
-<script>
-    // const chart = new Chartisan({
-    //     el: '#chart',
-    //     url: "",
-    // });
-</script>
