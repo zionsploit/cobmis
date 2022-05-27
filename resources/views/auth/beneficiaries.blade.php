@@ -4,17 +4,10 @@
 
 @section('contents')
     <div class="my-5">
-        <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">BENEFICIARIES</span>
+        <span class="gray-900 text-2xl font-semibold tracking-wider">BENEFICIARIES</span>
     </div>
     <div class="bg-[#3D405B] py-5 px-4 border-0 rounded shadow-md w-full">
-        <div class="float-right my-1 mb-3">
-            <div class="flex justify-start items-center gap-x-3">
-                <span class="text-gray-300 font-semibold text-lg tracking-wider">Search:</span>
-                <input type="text"
-                    class="px-2 py-1 w-[15em] outline-none focus:outline-none rounded text-lg font-semibold text-gray-700 tracking-wider">
-            </div>
-        </div>
-        <table class="table-auto text-gray-300 w-full items-center">
+        <table class="table-auto text-gray-300 w-full items-center" id="example">
             <thead>
                 <tr>
                     <th>NAME</th>
@@ -62,4 +55,9 @@
                 class="bg-gray-600 text-gray-50 px-2 py-1 border-0 rounded text-sm tracking-wider hover:bg-gray-700 transition-colors">BACK</button>
         </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
+    </script>
 @endsection

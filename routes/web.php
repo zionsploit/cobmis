@@ -3,11 +3,11 @@
 use App\Http\Controllers\Admin\BeneficiariesController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\RegistrationController;
+use App\Http\Controllers\Admin\ReportController;
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Authenticate;
 use App\Http\Middleware\RedirectIfAuthenticated;
 use Illuminate\Support\Facades\Route;
-use SebastianBergmann\CodeCoverage\Report\Html\Dashboard;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,9 +46,11 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::patch('/update-beneficiaries/{id}', [BeneficiariesController::class, 'UpdateModifyBeneficiaries'])->name('updateBeneficiaries');
     Route::any('/delete-beneficiaries/{id}', [BeneficiariesController::class, 'DeleteBeneficiaries'])->name('deleteBeneficiaries');
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
+    Route::get('/reports', [ReportController::class, 'Reports'])->name('reports');
 });
-//Authenticated Middleware
 
+//Authenticated Middleware
+// Route::view('/reports', 'auth.reports');
 // Route::view('/testDashboard', 'auth.dashboard');
 // Route::view('/testRegistration-form', 'auth.registration-form', ['status' => null, 'message' => null]);
 // Route::view('/testBeneficiaries', 'auth.beneficiaries');
