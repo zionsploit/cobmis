@@ -4,16 +4,16 @@
 
 @section('contents')
     <div class="my-5">
-        <span class="text-gray-300/80 text-2xl font-semibold tracking-wider">Modiy Beneficiaries</span>
+        <span class="text-gray-900 text-2xl font-semibold tracking-wider">Modiy Beneficiaries</span>
     </div>
     @if ($status === 200)
         <div class="bg-green-700/50 py-2 px-2 text-center border-0 rounded my-5">
-            <span class="font-semibold text-gray-100 text-lg tracking-wide">{{ $message }}</span>
+            <span class="font-semibold text-gray-900 text-lg tracking-wide">{{ $message }}</span>
         </div>
     @endif
     @if ($status === 500)
         <div class="bg-red-700/50 py-2 px-2 text-center border-0 rounded my-5">
-            <span class="font-semibold text-gray-100 text-lg tracking-wide">{{ $message }}</span>
+            <span class="font-semibold text-gray-900 text-lg tracking-wide">{{ $message }}</span>
         </div>
     @endif
     <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md">

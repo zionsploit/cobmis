@@ -42,7 +42,7 @@
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Report
                     </a>
-                    <a href=""
+                    <a href="{{ route('settings') }}"
                         class="text-base font-medium tracking-wider border-2 border-gray-500 rounded-sm px-5 py-3 hover:border-gray-300 transition-all hover:text-gray-300 cursor-pointer">
                         Setting
                     </a>
@@ -63,4 +63,3 @@
 </body>
 
 </html>
-

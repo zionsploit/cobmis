@@ -5,7 +5,8 @@
 @section('contents')
     <div class="my-5 flex justify-between items-center">
         <span class="text-gray-900 text-2xl font-semibold tracking-wider">View {{ 'User' }}</span>
-        <a href="{{ route('beneficiaries') }}" type="button" class="px-3 py-2 bg-green-400 hover:bg-green-400/50 cursor-pointer rounded">Back</a type="button">
+        <a href="{{ route('beneficiaries') }}" type="button"
+            class="px-3 py-2 bg-green-400 hover:bg-green-400/50 cursor-pointer rounded">Back</a type="button">
     </div>
     <div class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md grid grid-cols-2">
         <div class="flex flex-col justify-start items-start gap-y-2">
@@ -79,9 +80,10 @@
                 <span>Remarks:</span>
                 <span>{{ $data['remarks'] }}</span>
             </div>
+            <div class="flex justify-center items-center gap-x-2 text-gray-300 font-semibold tracking-wider text-base">
+                <span>Download:</span>
+                <a href="/" type="button" class="px-2 py-1 bg-green-600 text-gray-900 rounded-md">Download Residents</a>
+            </div>
         </div>
     </div>
-    {{-- <div id="viewRef" class="bg-gray-900 py-5 px-4 border-0 rounded shadow-md mt-10">
-        <span class="text-gray-300/80 text-md font-semibold tracking-wider">Beneficiaries</span>
-    </div> --}}
 @endsection
