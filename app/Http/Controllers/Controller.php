@@ -9,6 +9,7 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
@@ -55,17 +56,41 @@ class Controller extends BaseController
         ]);
 
         if (Auth::attempt($validated)) {
-            $request->session()->regenerate();
+            $request->session()->put('user', $request->username);
             return redirect('/dashboard');
         }
         return view('guests.login', ['status' => 'Invalid Credentials']);
     }
 
-    //logou Controller
+    //logout Controller
     public function logout()
     {
         Session::flush();
         Auth::logout();
         return redirect('login');
+    }
+
+    //change password controller
+    public function changepassword(Request $request)
+    {
+        $validated = $request->validate([
+            'currentpassword' => 'required|min:8|max:16',
+            'newpassword' => 'required|min:8|max:16',
+            'confirmnewpassword' => 'required|same:newpassword',
+        ]);
+
+        $username = $request->session()->get('user');
+        if ($validated) {
+            $user = DB::table('users')->where('username', '=', $username)->first();
+            if (Hash::check($request->currentpassword, $user->password)) {
+                $affected = DB::table('users')->where('username', '=', $username)->update(['password' => Hash::make($request->newpassword)]) ;//User::where('username', '=', 'adminuser')->update(['password' => $request->newpassword])
+                if ($affected) {
+                    return view('auth.settings')->with('affected', 'Password Change')->with('status', 200);
+                }
+                return view('auth.settings')->with('affected', 'Password Not Change')->with('status', 200);
+            }
+            return view('auth.settings')->with('affected', 'Password didnt exists')->with('status', 200);
+        }
+        return view('auth.settings')->with('affected', 'Invalid Password')->with('status', 200);
     }
 }

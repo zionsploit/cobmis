@@ -47,13 +47,12 @@ Route::middleware([Authenticate::class])->group(function () {
     Route::any('/delete-beneficiaries/{id}', [BeneficiariesController::class, 'DeleteBeneficiaries'])->name('deleteBeneficiaries');
     Route::get('/logout', [Controller::class, 'logout'])->name('logout');
     Route::get('/reports', [ReportController::class, 'Reports'])->name('reports');
-    Route::get('/settings', function () {
-        return view('auth.settings');
-    })->name('settings');
     Route::get('/print-resident', [ReportController::class, 'ResidentReports'])->name('resident-reports');
+    Route::view('/settings', 'auth.settings', ['status' => null, 'affected' => null])->name('settings');
+    Route::post('/change-password', [Controller::class, 'changepassword'])->name('change-password');
 });
 
-//Authenticated Middleware
+//Authenticated Middleware  
 // Route::view('/reports', 'auth.reports');
 // Route::view('/testDashboard', 'auth.dashboard');
 // Route::view('/testRegistration-form', 'auth.registration-form', ['status' => null, 'message' => null]);
